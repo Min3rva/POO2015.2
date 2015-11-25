@@ -5,29 +5,28 @@ public class Client {
 	String address;
 	
 	Client(String n, String a){
-		//TODO
+		this.name = n;
+		this.address = a;
 	}
 	
 	String getName(){
-		//TODO
-		return null;
+		return this.name;
 	}
 	
 	String getAddress(){
-		//TODO
-		return null;
+		return this.address;
 	}
 	
 	void setName(String n){
-		//TODO
+		this.name = n;
 	}
 	
 	void setAddress(String a){
-		//TODO
+		this.address = a;
 	}
 	
 	public String toString(){
-		//TODO
-		return null;
+		String str = "Name: " + this.name + ", Address: " + this.address; 
+		return str;
 	}
 }

@@ -6,19 +6,58 @@ public class Conta {
 	int saldo;
 	
 	Conta (String num){
-		//TODO
+		this.number = num;
+		this.saldo = 0;
 	}
 	
 	Conta (String num, Client cl){
-		//TODO
+		this.number = num;
+		this.client = cl;
+		this.saldo = 0;
 	}
 	
 	Client getClient(){
-		//TODO
-		return null;
+		return this.client;
+	}
+	
+	String getNumber()	{
+		return this.number;
+	}
+	
+	int getBalance(){
+		return this.saldo;
 	}
 	
 	void setClient(Client cl){
-		//TODO
+		this.client = cl;
+	}
+	
+	void deposit(int value)
+	{
+		this.saldo += value;
+	}
+	
+	int withdraw(int value)
+	{
+		if(value <= this.saldo)
+		{
+			this.saldo -= value;
+			return value;
+		}
+		
+		return 0;
+	}
+	
+	boolean transference(Conta acc, int value)
+	{
+		if(this.saldo >= value)
+		{
+			this.saldo -= value;
+			acc.saldo += value;
+			
+			return true;
+		}
+		
+		return false;
 	}
 }
