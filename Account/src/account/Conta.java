@@ -5,6 +5,10 @@ public class Conta {
 	Client client;
 	int saldo;
 	
+	public Conta() {
+		// empty constructor
+	}
+	
 	Conta (String num){
 		this.number = num;
 		this.saldo = 0;
